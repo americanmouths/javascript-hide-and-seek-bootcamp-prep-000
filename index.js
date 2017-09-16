@@ -16,12 +16,12 @@ function increaseRankBy(n) {
   }
 }
 
-function deepestChild(array,criteriaFn) {
-  const lis = document.getElementById('grand-node').querySelectorAll('div');
-
-  for (var i = 0; i < lis.length; i++) {
-    if (criteriaFn(array[i])) {
-      return array[i]
+function deepestChild() {
+  const parentNode = document.getElementById('grand-node');
+  const childNode = parentNode.querySelectorAll('div');
+  for (var i = 0; i < childNode.length; i++) {
+    if (childNode[i].children.length === 0) {
+      return childNode[i];
     }
   }
 }
