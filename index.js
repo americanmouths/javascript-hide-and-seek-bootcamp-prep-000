@@ -4,6 +4,6 @@ function getFirstSelector(selector) {
 }
 
 function nestedTarget(div, nested, target) {
-  const nestTarg = document.getElementById('nested').querySelector(.target);
+  const nestTarg = document.getElementById('nested').querySelectorAll('div.target');
   return nestTarg;
 }
